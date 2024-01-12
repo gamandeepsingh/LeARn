@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: repo;
+    src: url('./font-family//Repo.otf');
+}
+@font-face {
+    font-family: repo-light;
+    src: url('./font-family//Repo-Light.otf');
+}
+@font-face {
+    font-family: repo-medium;
+    src: url('./font-family//Repo-DemiBold.otf');
+}
+@font-face {
+    font-family: repo-bold;
+    src: url('./font-family//Repo-Bold.otf');
+}
+@font-face {
+    font-family: repo-extrabold;
+    src: url('./font-family//Repo-ExtraBold.otf');
+}
+
+#root{
+    overflow-x: hidden;
+}

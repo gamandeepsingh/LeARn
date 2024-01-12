@@ -1,0 +1,20 @@
+.about-container {
+    /* height: 70%; */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(255, 254, 254, 0.139);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.about-container h1{
+    background-color: #ff0000;
+    background-image: linear-gradient(45deg, red, rgba(4, 4, 255, 0.678));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
