@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { FaBars } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import logo from './logo.png'
+import logo from '../assets/logo.png'
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
@@ -19,7 +19,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-transparent h-20 absolute top-0 left-0 right-0 overflow-x-hidden" >
+    <Disclosure as="nav" className="bg-transparent absolute top-0 left-0 right-0 overflow-x-hidden" >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
@@ -134,7 +134,7 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="space-y-1 px-2 pb-3 pt-2 bg-gray-700">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}

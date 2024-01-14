@@ -2,14 +2,16 @@ import React from 'react'
 import Typed from 'react-typed';
 import './Hero.css'
 import { IoCamera } from "react-icons/io5";
-import logo from "./logo.png"
+import logo from "../assets/logo.png"
 export default function Hero() {
   return (
-    <div className='w-screen flex justify-center items-center min-h-[95vh] flex-wrap bg-black' data-hero-container>
-
+    <div className='w-full flex justify-center sm:justify-center md:justify-center lg:justify-between xl:justify-between items-center h-full flex-wrap relative  overflow-visible z-10' data-hero-container>
+      {/* animation */}
+     <div className='hero-anime-1 absolute'></div>
+     <div className='hero-anime-2 absolute'></div>
       {/* left */}
-      <div className='w-max h-[80%] text-white flex flex-col justify-center  text-start overflow-x-hidden'>
-        <h1 className='text-[15vh] font-[repo-extrabold]  ml-4' data-hero-heading>leARn</h1>
+      <div className='w-max h-[80%] text-white flex flex-col items-center sm:items-center md:items-start lg:items-start xl:items-start justify-center  text-start mb-[15vh]'>
+        <h1 className='text-[18vh] font-[repo-extrabold]  ml-4' data-hero-heading>leARn</h1>
         <Typed
           strings={[
             'Empowering Every Mind!',
@@ -18,11 +20,11 @@ export default function Hero() {
           ]}
           typeSpeed={40}
           backSpeed={50}
-          cursorChar='!'  // Use cursorChar to set the cursor character
-          style={{ color: 'white' , fontFamily:"repo-light" }}  // Use 'color' to set the cursor character color
+          cursorChar='!'  
+          style={{ color: 'white' , fontFamily:"repo-light" }}  
           loop
         >
-        <input className='bg-black ml-4 text-[5vh]  responsive-input' type="text" data-hero-input disabled/>
+        <input className=' ml-4  responsive-input' type="text" data-hero-input disabled/>
 
         </Typed>  
         <ul className='font-[repo-light] text-gray-300 list-none decoration-none ml-4 space-y-3 mt-8'>
@@ -32,8 +34,8 @@ export default function Hero() {
         </ul>
         <button className="hero-camera w-32 mt-4 ml-4">
         <IoCamera fontSize={60}/>
-          <span class="now">now!</span>
-          <span class="play">Open</span>
+          <span className="now">now!</span>
+          <span className="play">Open</span>
         </button>
 
       </div>

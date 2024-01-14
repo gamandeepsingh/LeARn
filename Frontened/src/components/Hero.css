@@ -66,16 +66,74 @@
     transform: translateX(200%);
     transition-delay: 300ms;
   }
+
+  [data-hero-input]{
+    outline: none;
+    border: none;
+  }
 [data-hero-input]:focus{
   outline: none;
   
 }
+.hero-anime-1{
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.295);
+  border-radius: 30% 70% 57% 43% / 30% 30% 70% 70% ;
+  transition: all 5s ease-in;
+  animation: anime-1 5s infinite alternate ease-in-out;
+  transform: translateX(-100px) translateY(-100px);
+  z-index: -1;
+  left: 0;
+}
+.hero-anime-2{
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.295);
+  border-radius: 30% 70% 57% 43% / 30% 30% 70% 70% ;
+  transition: all 5s ease-in;
+  animation: anime-2 4s infinite alternate ease-in-out;
+  right: -50px;
+  z-index: -1;
+}
 
-
-
+@keyframes anime-1 {
+  0%{
+    border-radius: 30% 70% 57% 43% / 30% 30% 70% 70% ;
+    transform: translateX(-100px) translateY(-100px);
+  }
+  100%{
+    border-radius: 52% 48% 84% 16% / 61% 71% 29% 39% ;
+    transform: translateX(0px) translateY(0px);
+  }
+}
+@keyframes anime-2 {
+  0%{
+    border-radius: 30% 70% 57% 43% / 30% 30% 70% 70% ;
+  }
+  100%{
+    border-radius: 52% 48% 84% 16% / 61% 71% 29% 39% ;
+  }
+}
+.responsive-input{
+  background-color: transparent;
+  font-size: 5vh;
+  width: 600px;
+  font-family: repo-bold;
+}
 @media (max-width: 600px) {
   .responsive-input {
     font-size: 4vh; 
-    max-width: 80%; 
+    max-width: 100%;
+    width: 100%; /* Adjust the width as needed for small screens */
+    margin-top: 10px;  
+  }
+}
+@media (max-width: 900px) {
+  .hero-anime-2{
+    display: none;
+  }
+  .hero-anime-1{
+    left: 20%;
   }
 }
