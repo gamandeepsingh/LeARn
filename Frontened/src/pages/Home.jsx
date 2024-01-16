@@ -17,7 +17,7 @@ export default function Home() {
         <div className=' w-screen flex justify-center items-center'>
             <TeamMember/>
         </div>
-        <div className=''>
+        <div className='w-screen flex justify-center items-center'>
             <Contact/>
         </div>
         <div className=''>
