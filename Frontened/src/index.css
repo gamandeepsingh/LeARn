@@ -26,3 +26,9 @@
 #root{
     overflow-x: hidden;
 }
+
+@media (max-width:576px) {
+    .smalling-text{
+        font-size: 35px;
+    }
+}

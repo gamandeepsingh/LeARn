@@ -5,7 +5,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
 import { IoIosSend } from "react-icons/io";
 
 export default function Contact() {
