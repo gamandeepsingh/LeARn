@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye-Catching Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            flex-direction: column; /* Center items vertically */
+        }
+
+        h1, h2, p {
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff3d00;
+        }
+
+        form {
+            background: linear-gradient(to right, #ff5e62, #ff9966);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #ff3d00;
+            border-radius: 5px;
+            color: #ff3d00;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #ff3d00, #ff9966);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Volcano</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+    {% if result %}
+        <h2>Detected Words:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
