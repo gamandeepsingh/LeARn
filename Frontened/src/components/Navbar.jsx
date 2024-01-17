@@ -1,16 +1,17 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
+import {HashLink} from 'react-router-hash-link'
 import { FaBars } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import logo from '../assets/logo.png'
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'About', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-  { name: 'Login', href: '#', current: false },
-  { name: 'Sign Up', href: '#', current: false },
+  { name: 'Home', href: '/', current: true },
+  { name: 'About', href: '#about', current: false },
+  { name: 'Contact', href: '#contact', current: false },
+  { name: 'Login', href: '/login', current: false },
+  { name: 'Sign Up', href: '/signup', current: false },
 ]
 
 function classNames(...classes) {
@@ -19,7 +20,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-transparent absolute top-0 left-0 right-0 overflow-x-hidden" >
+    <Disclosure as="nav" className="bg-transparent fixed top-0 left-0 right-0 overflow-x-hidden z-[99]" >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
@@ -49,9 +50,10 @@ export default function Navbar() {
               <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <HashLink
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
+                        smooth
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-lg font-[repo-medium]'
@@ -59,7 +61,7 @@ export default function Navbar() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </HashLink>
                     ))}
                   </div>
                 </div>

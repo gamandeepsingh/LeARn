@@ -4,7 +4,7 @@ import gif from '../assets/cat.gif'
 
 export default function About() {
   return (
-    <div className='w-full max-w-[1080px]  h-screen overflow-x-hidden flex justify-center items-center mx-2'>
+    <div id='about' className='w-full max-w-[1080px] min-h-screen overflow-x-hidden flex justify-center items-center mx-2'>
       <div className='about-container flex flex-col justify-between items-center'>
             <h1 className='text-[8vh] font-[repo-extrabold] text-red-500 underline mt-2'>About leARn</h1>
             {/*  */}

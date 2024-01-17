@@ -11,9 +11,9 @@ import { IoIosSend } from "react-icons/io";
 export default function Contact() {
   const [selected, setSelected] = useState("UI/UX")
   return (
-    <div className='text-white max-w-[1080px] w-full flex justify-center flex-wrap bg-black min-h-[80vh] mx-2 mb-[10vh] gap-10'>
+    <div id='contact' className='text-white max-w-[1080px] w-full flex justify-center flex-wrap bg-black min-h-[80vh] mx-2 mb-[10vh] gap-10'>
       {/* left */}
-      <div className='flex flex-col  justify-between items-start w-[100%] lg:w-[45%] xl:w-[45%]  min-h-[80vh]'>
+      <div className='flex flex-col  justify-between sm:items-center md:items-center lg:items-start xl:items-start items-start w-[100%] lg:w-[45%] xl:w-[45%]  min-h-[80vh]'>
         {/* text */}
         <div>
           <h1 className='text-[3rem]'>Let's Discuss on Something <span className='text-[red]'>cool</span> together</h1>
@@ -75,7 +75,7 @@ export default function Contact() {
             value={"Your Message"}
             ></textarea>
 
-            <button type='submit' className='flex bg-[red] py-2 px-3 w-fit rounded-xl mt-6 group'>
+            <button type='submit' className='flex bg-[red] py-2 px-3 w-fit rounded-xl mt-6 group mb-4'>
               <IoIosSend fontSize={30} color='white' className='group-hover:animate-pulse'/>
               <span className='text-xl text-white'>Send Message</span>
             </button>

@@ -7,6 +7,9 @@ import { loadSlim } from "@tsparticles/slim";
 import {Routes , Route } from 'react-router-dom'
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Cursor from "./components/Cursor";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 function App() {
   const [init, setInit] = useState(false);
 
@@ -111,11 +114,14 @@ function App() {
 
   return (
     <div className="w-[100vw] flex flex-col items-center bg-black overflow-x-hidden"> 
+    <Cursor/>
       <div>
         <Navbar/>
       </div>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/signup" element={<SignUp/>}></Route>
       </Routes>
     </div>
   );
