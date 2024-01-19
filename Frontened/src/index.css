@@ -29,6 +29,12 @@
 
 @media (max-width:576px) {
     .smalling-text{
-        font-size: 35px;
+        font-size: 40px;
+    }
+    [data-hero-heading]{
+        font-size: 110px;
+    }
+    .responsive-input{
+        font-size: 25px;
     }
 }

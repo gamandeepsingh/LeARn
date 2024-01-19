@@ -16,7 +16,7 @@ export default function Hero() {
           strings={[
             'Empowering Every Mind!',
             'Inclusive Education!',
-            'For a Sustainable Tomorrow!'
+            'A Sustainable Tomorrow!'
           ]}
           typeSpeed={40}
           backSpeed={50}

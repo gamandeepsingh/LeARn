@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import {HashLink} from 'react-router-hash-link'
 import { FaBars } from "react-icons/fa";
@@ -19,8 +19,26 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const [nav, setNav] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setNav(true);
+      } else {
+        setNav(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <Disclosure as="nav" className="bg-transparent fixed top-0 left-0 right-0 overflow-x-hidden z-[99]" >
+    <Disclosure as="nav"  className={`bg-transparent fixed top-0 left-0 right-0 overflow-x-hidden z-[99] `} style={{ backgroundColor: nav ? 'black' : ''  }} >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
@@ -47,7 +65,7 @@ export default function Navbar() {
                 </div>
                 
               </div>
-              <div className="hidden sm:ml-6 sm:block">
+              <div className="hidden sm:ml-6 sm:block ">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <HashLink
@@ -136,12 +154,13 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2 bg-gray-700">
+            <div className="space-y-1 px-2 pb-3 pt-2 bg-black">
               {navigation.map((item) => (
-                <Disclosure.Button
+                <HashLink to={item.href} smooth>
+                  <Disclosure.Button
                   key={item.name}
                   as="a"
-                  href={item.href}
+                  
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-[repo-medium]'
@@ -150,6 +169,7 @@ export default function Navbar() {
                 >
                   {item.name}
                 </Disclosure.Button>
+                </HashLink>
               ))}
             </div>
           </Disclosure.Panel>
