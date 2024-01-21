@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import TeamMember from '../components/TeamMember'
@@ -6,7 +6,14 @@ import Footer from '../components/Footer'
 import Contact from '../components/Contact'
 import Testimonial from '../components/Testimonial/Testimonial'
 import Faq from '../components/faq/Faq'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 export default function Home() {
+    useEffect(() => {
+      Aos.init({duration:1200})
+    }, [])
+    
     
     return (
         <>
@@ -23,7 +30,7 @@ export default function Home() {
             <Contact/>
         </div>
         <div className='flex flex-col items-center min-h-[100vh] w-screen mx-4'>
-            <h1 className='font-[repo-extrabold] text-white text-6xl team-heading mb-6 smalling-text'>Our Testimonials</h1>
+            <h1 data-aos="zoom-in" className='font-[repo-extrabold] text-white text-6xl team-heading mb-6 smalling-text'>Our Testimonials</h1>
             <div className=' w-[100%] sm:w-screen md:w-screen lg:w-1/4 xl:w-1/4 2xl:w-1/4'>
             <Testimonial/>
             </div>

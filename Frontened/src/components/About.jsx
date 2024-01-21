@@ -1,10 +1,16 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import "./about.css"
 import gif from '../assets/cat.gif'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 export default function About() {
+  useEffect(() => {
+   Aos.init({duration:1200})
+  },[])
+  
   return (
-    <div id='about' className='w-full max-w-[1080px] min-h-screen overflow-x-hidden flex justify-center items-center mx-2'>
+    <div data-aos="fade-up" data-aos-anchor-placement="top-center" id='about' className='w-full max-w-[1080px] min-h-screen overflow-x-hidden flex justify-center items-center mx-2'>
       <div className='about-container flex flex-col justify-between items-center'>
             <h1 className='text-[8vh] font-[repo-extrabold] text-red-500 underline mt-2 smalling-text'>About leARn</h1>
             {/*  */}

@@ -1,11 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import img from '../assets/login-side.png'
 import './login.css'
 import googleImg from '../assets/login/google.png'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    useEffect(() => {
+      Aos.init({duration:1200})
+    }, [])
+    
 
     function validatediv() {
         return email.length > 0 && password.length > 0;
@@ -18,11 +24,11 @@ export default function Login() {
         <div className='h-screen w-screen flex justify-center  items-center '>
             <div className='login-container w-[1080px] flex justify-center min-h-[70vh] items-center '>
                 {/* left */}
-                <div className=' hidden sm:hidden md:flex lg:flex xl:flex w-[50%] '>
+                <div data-aos="fade-right" className=' hidden sm:hidden md:flex lg:flex xl:flex w-[50%] '>
                     <img src={img} width={"80%"} alt="" />
                 </div>
                 {/* right */}
-                <div className="bg-white min-h-[400px] w-[100%] p-4 m-4 sm:w-[100%] md:w-[100%] lg:w-[40%] xl:w-[40%] rounded-xl flex flex-col justify-center" >
+                <div data-aos="flip-up" className="bg-white min-h-[400px] w-[100%] p-4 m-4 sm:w-[100%] md:w-[100%] lg:w-[40%] xl:w-[40%] rounded-xl flex flex-col justify-center" >
                     <h1 className='text-4xl font-[repo-extrabold] text-[red] text-center mb-2'>Login</h1>
                     <form onSubmit={handleSubmit} className='flex flex-col justify-center relative'>
                         

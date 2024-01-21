@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const data = [
 
@@ -44,6 +46,9 @@ const data = [
 
 export default function Faq() {
     const [selected, setSelected] = useState(null)
+    useEffect(()=>{
+        Aos.init({duration:1200})
+    })
     function ClickHandler(id) {
         if (selected !== id)
             setSelected(id)
@@ -52,7 +57,7 @@ export default function Faq() {
     }
 
     return (
-        <div className='w-screen sm:w-screen md:w-[50vw] lg:w-[50vw] xl:w-[50vw] 2xl:w-[50vw] transition-all duration-200 '>
+        <div data-aos="fade-up" className='w-screen sm:w-screen md:w-[50vw] lg:w-[50vw] xl:w-[50vw] 2xl:w-[50vw] transition-all duration-200 '>
             <h1 className=' text-center text-6xl font-[repo-extrabold] team-heading smalling-text'>FAQs</h1>
             <div className='bg-black rounded-xl flex flex-col  w-full mt-6'>
                 {

@@ -5,6 +5,8 @@ import { FaBars } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import logo from '../assets/logo.png'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
@@ -20,7 +22,9 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [nav, setNav] = useState(false)
-
+  useEffect(()=>{
+    Aos.init({duration:800})
+  },[])
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -29,6 +33,7 @@ export default function Navbar() {
         setNav(false);
       }
     };
+    
 
     window.addEventListener('scroll', handleScroll);
 
@@ -38,7 +43,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <Disclosure as="nav"  className={`bg-transparent fixed top-0 left-0 right-0 overflow-x-hidden z-[99] `} style={{ backgroundColor: nav ? 'black' : ''  }} >
+    <Disclosure data-aos='fade-down' as="nav"  className={`bg-transparent fixed top-0 left-0 right-0 overflow-x-hidden z-[99] `} style={{ backgroundColor: nav ? 'black' : ''  }} >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">

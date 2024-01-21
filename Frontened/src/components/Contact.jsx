@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect } from 'react'
 import { IoIosMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
@@ -6,13 +6,19 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Contact() {
   const [selected, setSelected] = useState("UI/UX")
+  useEffect(() => {
+    Aos.init({duration:1200})
+   },[])
+
   return (
     <div id='contact' className='text-white max-w-[1080px] w-full flex justify-center flex-wrap bg-black min-h-[80vh] mx-2 mb-[10vh] gap-10'>
       {/* left */}
-      <div className='flex flex-col  justify-between sm:items-center md:items-center lg:items-start xl:items-start items-start w-[100%] lg:w-[45%] xl:w-[45%]  min-h-[80vh]'>
+      <div data-aos="fade-right" className='flex flex-col  justify-between sm:items-center md:items-center lg:items-start xl:items-start items-start w-[100%] lg:w-[45%] xl:w-[45%]  min-h-[80vh]'>
         {/* text */}
         <div>
           <h1 className='text-[3rem]'>Let's Discuss on Something <span className='text-[red]'>cool</span> together</h1>
@@ -41,7 +47,7 @@ export default function Contact() {
 
       </div>
       {/* right */}
-      <div className='max-w-[500px]  flex flex-col items-start justify-evenly bg-white text-black rounded-xl px-6'>
+      <div data-aos="flip-down" className='max-w-[500px]  flex flex-col items-start justify-evenly bg-white text-black rounded-xl px-6'>
           <div className='w-full'>
             <p className='font-[repo] m-1'>I'm interested in... </p>
             <div className='font-[repo-light] flex flex-wrap mb-4'>

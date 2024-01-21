@@ -1,12 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Carousel from './Carousel';
 import "./testimonial.css";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaCircle } from "react-icons/fa";
 import img from "../../assets/team-members/gamandeep.jpeg"
+import Aos from 'aos';
+import "aos/dist/aos.css"
+
 export default function Testimonial() {
   const [activeIndex, setActiveIndex] = useState(0);
+  useEffect(() => {
+    Aos.init(1200)
+  }, [])
+  
   const items = [
     {
       title: "Student",
