@@ -20,10 +20,10 @@ export default function Home() {
         <div className='mt-[8vh] w-[100%] max-w-[1050px] min-h-[95vh] flex flex-col items-center justify-center '>
             <Hero/>            
         </div>
-        <div className=' w-screen h-screen flex justify-center items-center'>
+        <div className=' w-screen h-screen flex justify-center items-center mt-[20vh] sm:mt-[15vh] md:mt-[10vh] lg:mt-0 xl:mt-0'>
             <About/>
         </div>
-        <div className=' w-screen flex justify-center items-center'>
+        <div className=' w-screen flex justify-center items-center mt-[20vh] sm:mt-[20vh] md:mt-[10vh] lg:mt-0 xl:mt-0'>
             <TeamMember/>
         </div>
         <div className='w-screen flex justify-center items-center'>
