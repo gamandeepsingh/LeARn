@@ -25,7 +25,7 @@ export default function TeamMember() {
         {
             data.map((item,index)=>{
                 return (
-                    <div data-aos={`${index%2===0? "flip-left": "flip-right"}`} key={index} className='w-[250px] flex flex-col items-center justify-center team-container gap-6 pt-4'>
+                    <div data-aos={`${index%2===0? "flip-right": "flip-left"}`} key={index} className='w-[250px] flex flex-col items-center justify-center team-container gap-6 pt-4'>
                         <div className='team-about block '>
                             <img src={item.img} className='aspect-[1/1]' alt="" />
                         </div>

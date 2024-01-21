@@ -9,7 +9,7 @@ export default function Carousel({ item, width }) {
     // </div>
     <div className='carousel-item' style={{ width: width}}>
       <div className="card">
-    <div className="card-image overflow-hidden object-contain"><img src={item.icon} width={"100%"} alt="" /></div>
+    <div className="card-image "><img src={item.icon}  alt="" /></div>
     <div className="category"> {item.title} </div>
     <div className="heading ">{item.description}
         <div className="author"> By <span className="name">Gaman</span> 4 days ago</div>

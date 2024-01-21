@@ -10,9 +10,16 @@ import Home from "./pages/Home";
 import Cursor from "./components/Cursor";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 function App() {
   const [init, setInit] = useState(false);
-
+  const [nav, setNav] = useState(false)
+  useEffect(()=>{
+    Aos.init({duration:1000, easing:"linear"})
+  },[])
+  
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
