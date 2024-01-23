@@ -66,18 +66,18 @@ export default function Contact() {
           <form action="" className='flex flex-col w-full  gap-6'>
             <input type="text"
             placeholder='Your name'
-            value={"Your name"}
+            // value={"Your name"}
             className='w-full  outline-none focus:outline-none  ring-transparent focus:ring-transparent border-t-0 border-r-0 border-l-0  border-b-4 border-[red] rounded-md'
             />
             <input type="email"
             placeholder='Your email'
             className='w-full outline-none focus:outline-none  focus:ring-transparent 
              border-[red]  border-t-0 border-r-0 border-l-0   border-b-4 rounded-md'
-             value={"Your Email"}
+            //  value={"Your Email"}
             />
             <textarea name="" id="" cols="10" rows="2" placeholder='Your Message'
             className='w-full  outline-none focus:outline-none  focus:ring-transparent  border-[red]  border-t-0 border-r-0 border-l-0  border-b-4 rounded-md pl-3 '
-            value={"Your Message"}
+            // value={"Your Message"}
             ></textarea>
 
             <button type='submit' className='flex bg-[red] py-2 px-3 w-fit rounded-xl mt-6 group mb-4'>
