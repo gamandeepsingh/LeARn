@@ -72,9 +72,9 @@ export default function Navbar() {
               </div>
               <div className="hidden sm:ml-6 sm:block ">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {navigation.map((item,index) => (
                       <HashLink
-                        key={item.name}
+                        key={index}
                         to={item.href}
                         smooth
                         className={classNames(
@@ -160,8 +160,8 @@ export default function Navbar() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2 bg-black">
-              {navigation.map((item) => (
-                <HashLink to={item.href} smooth>
+              {navigation.map((item,index) => (
+                <HashLink key={index} to={item.href} smooth>
                   <Disclosure.Button
                   key={item.name}
                   as="a"
