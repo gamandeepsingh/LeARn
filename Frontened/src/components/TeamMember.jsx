@@ -15,7 +15,7 @@ export default function TeamMember() {
     const data = [
         {name:"Gamandeep Singh" , domain:"Frontned Developer" ,img:gam},               
         {name:"Prapti Sharma" , domain:"Backend Developer" ,img:pra},               
-        {name:"Aniket Ray" , domain:"ML Enthusiast" ,img:ani},    
+        {name:"Aryash " , domain:"ML Enthusiast" ,img:gam},    
         {name:"Anoushka Goel" , domain:"AR Developer" ,img:ano},    
     ]
   return (
