@@ -7,6 +7,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.0.3",
     "aos": "^2.3.4",
+    "firebase": "^10.8.0",
     "focus-visible": "^5.2.0",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.11.2",
