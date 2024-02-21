@@ -1,4 +1,6 @@
 import "./App.css";
+import { getDatabase, ref, set } from "firebase/database";
+import { app } from "./firebase";
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
@@ -12,6 +14,8 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+
+const database = getDatabase(app);
 
 function App() {
   const [init, setInit] = useState(false);
