@@ -1,5 +1,5 @@
 # leARn 🚀
-###Augmented Education Without Boundaries, Where Every Mind Matters.
+### Augmented Education Without Boundaries, Where Every Mind Matters.
 
 ## Overview 
 
