@@ -16,24 +16,27 @@ export default function Testimonial() {
   
   const items = [
     {
-      title: "Student",
-      description:
-        "Baseball is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game occurs over the course of several plays, ",
+      title: "Sarah Johnson(Teacher)",
+      description: "leARn has transformed my classroom into an engaging and interactive learning environment. My students are more motivated and excited to learn using AR technology!",
       icon: img,
     },
     {
-      title: "Teacher",
-      description:
-        "Walking (also known as ambulation) is one of the main gaits of terrestrial locomotion among legged animals. Walking is typically slower than running and other gaits. ",
-      icon: img,
+        title: "John Smith(Parent)",
+        description: "As a parent, I'm impressed by how leARn makes learning fun and accessible for my child. It's incredible to see them explore and understand complex concepts with ease.",
+        icon: img,
     },
     {
-      title: "Student",
-      description:
-        "Weightlifting generally refers to activities in which people lift weights, often in the form of dumbbells or barbells. People lift various kinds of code.",
-      icon:img,
+        title: "Emily Rodriguez(Student)",
+        description: "Using leARn has been a game-changer for my studies. The AR experiences are immersive and make learning enjoyable. I feel more confident in my subjects!", 
+        icon: img,
     },
-  ];
+    {
+        title: "Michael Thompson(Educator)",
+        description: "leARn's innovative approach to education is commendable. It's empowering educators to deliver impactful lessons and cater to diverse learning styles effectively.", 
+        icon: img,
+    },
+];
+
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = items.length-1;

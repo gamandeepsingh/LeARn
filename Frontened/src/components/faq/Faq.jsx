@@ -5,42 +5,46 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 const data = [
-
     {
         id: 1,
-        title: "Lorem ipsum dolor sit amet,",
-        content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,ultricies metus at, consequat velit. Curabitur `,
+        title: "What is leARn?",
+        content: "leARn, developed by TEAM Cult for the Google Solution Challenge, is an innovative Augmented Reality (AR) educational platform revolutionizing learning experiences. It utilizes cutting-edge technologies to bridge educational gaps and contribute to achieving United Nations Sustainable Development Goals (SDGs).",
     },
     {
         id: 2,
-        title: "Nunc maximus, magna at ultricies elementum",
-        content:
-            "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+        title: "How does leARn contribute to SDGs?",
+        content: "leARn actively contributes to several SDGs, including Quality Education (SDG 4), Industry, Innovation, and Infrastructure (SDG 9), Reduced Inequalities (SDG 10), and Partnerships for the Goals (SDG 17). By leveraging AR technologies, leARn aims to enhance educational accessibility and promote inclusive learning environments.",
     },
     {
         id: 3,
-        title: "Curabitur laoreet, mauris vel blandit fringilla",
-        content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.`,
+        title: "What technologies does leARn use?",
+        content: "leARn utilizes a robust technology stack, including OpenCV, deep learning, React, Django, and Google technologies. These cutting-edge tools ensure a seamless and efficient learning experience for users.",
     },
     {
         id: 4,
-        title: "What is the package version",
-        content: <p>current version is 1.2.1</p>,
+        title: "How do I get started with leARn?",
+        content: "To begin your educational journey with leARn, visit the website to download the AR application. Simply click on the provided download link to install the app on your device.",
     },
     {
         id: 5,
-        title: "Curabitur laoreet, mauris vel blandit fringilla",
-        content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.`,
+        title: "How does leARn utilize AR technology?",
+        content: "Once you've installed the app, launch it on your device and grant permission to access your device's camera. leARn utilizes AR technology, powered by Unity, to augment 3D models onto your device screen based on real-world objects captured by the camera.",
     },
     {
         id: 6,
-        title: "Curabitur laoreet, mauris vel blandit fringilla",
-        content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.`,
+        title: "How does leARn recognize objects in pictures?",
+        content: "When scanning a picture using the app's camera, leARn utilizes advanced image recognition techniques, including OpenCV and Google Vision API, to identify objects within the picture accurately.",
     },
-
+    {
+        id: 7,
+        title: "Can I interact with the augmented 3D models?",
+        content: "Yes, leARn allows users to interact with the augmented 3D models displayed on their devices. You can explore additional features and information related to the objects by interacting with the models.",
+    },
+    {
+        id: 8,
+        title: "What information is displayed alongside the augmented 3D models?",
+        content: "Alongside the augmented 3D models, leARn provides relevant information and descriptions about the recognized objects. This additional information enhances the learning experience and provides valuable insights into the objects being studied.",
+    },
 ];
 
 
