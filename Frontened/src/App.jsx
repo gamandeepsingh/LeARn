@@ -11,7 +11,6 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Cursor from "./components/Cursor";
 import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -132,7 +131,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
-        <Route path="/signup" element={<SignUp/>}></Route>
       </Routes>
     </div>
   );
