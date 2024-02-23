@@ -39,13 +39,6 @@ export default function Home() {
         <div className='min-h-screen'>
             <Faq/>
         </div>
-        <div className='text-white flex flex-col gap-4 mb-4'>
-           <h1 className='text-white text-xl text-center'>Check out the Link:</h1>
-           <ul className=' text-red-500 flex gap-4 w-screen justify-center'>
-            <li><Link to="https://youtu.be/ZIeRs81zE3M?feature=shared" target='blank'>Youtube Video</Link></li> <span className='text-white'>or</span>
-            <li><Link to="https://www.canva.com/design/DAF5-ZM0cjg/JDANLKnDnojey9SH6FCCOw/edit?ui=eyJHIjp7fX0" target='blank'>PPT Link</Link></li>
-           </ul>
-        </div>
         <div className=''>
             <Footer/>
         </div>

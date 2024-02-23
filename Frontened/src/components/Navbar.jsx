@@ -4,7 +4,7 @@ import {HashLink} from 'react-router-hash-link'
 import { FaBars } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import logo from '../assets/logo.png'
+import logo from '../assets/newlogo.png'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -13,7 +13,6 @@ const navigation = [
   { name: 'About', href: '#about', current: false },
   { name: 'Contact', href: '#contact', current: false },
   { name: 'Login', href: '/login', current: false },
-  { name: 'Sign Up', href: '/signup', current: false },
 ]
 
 function classNames(...classes) {
