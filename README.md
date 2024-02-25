@@ -60,7 +60,3 @@ Welcome to our Learning Platform, which utilizes Virtual Reality (VR) and Machin
     ```
     
 4. Your backend is now live on Firebase, and you can interact with it from your frontend.
-
-## License 📝
-
-This project is licensed under the [MIT License](LICENSE).
